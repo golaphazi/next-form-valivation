@@ -1,0 +1,103 @@
+
+$primary-color: #007acc;
+
+
+/*Dashboard Campaingn Step forms*/
+.wfp-campaign-content{
+	#wfp_regForm{
+		.wfp-input {
+		  padding: 10px;
+		  width: 100%;
+		  font-size: 17px;
+		  font-family: Raleway;
+		  border: 1px solid #aaaaaa;
+		}
+		
+		.wfp-invalid {
+		  background-color: #ffdddd;
+		}
+		
+		.wfp-tabs-control{
+			.wfp-tab {
+			  display: none;
+			}
+			.wfp-tab{
+				&.active {
+				  display: block;
+				}
+			}
+		}
+		.wfp-tab-step-control{
+			.wfp-step {
+				margin: 0 2px;
+				background-color: $primary-color;
+				border: none;
+				border-radius: 10px;
+				display: inline-block;
+				opacity: 0.5;
+				font-style: normal;
+				font-weight: initial;
+				text-transform: capitalize;
+				font-size: 13px;
+				padding: 14px 21px;
+			}
+			.wfp-step.active {
+			  opacity: 1;
+			}
+			.wfp-step.finish {
+			  background-color: #4CAF50;
+			}
+		}
+		
+		/*form bottom*/
+		.wfp-form-fotter{
+			  display: block;
+			  
+			  button.wfp-form-button {
+				  background-color: $primary-color;
+				  color: #ffffff;
+				  border: none;
+				  padding: 10px 20px;
+				  font-size: 13px;
+				  cursor: pointer;
+				  font-style: normal;
+				  font-weight: initial;
+				  text-transform: capitalize;
+				  border: none;
+				  border-radius: 10px;
+				}
+
+				button.wfp-form-button:hover {
+				  opacity: 0.8;
+				}
+				
+				.wfp-form-button.wfp-preview{ 
+					background-color: #bbbbbb;
+					display: none;
+					&.open{
+					  display:block;
+					}
+				}
+				.wfp-form-button.wfp-next{
+					float: right;
+					&.finish{
+						background-color: #4CAF50;
+					}
+					&.disabled{
+						position: relative;
+					}
+					&.disabled:before{
+						position: absolute;
+						top:0;
+						left: 0px;
+						width: 100%;
+						height: 100%;
+						cursor: no-drop;
+					}
+				}
+		}
+	}
+}
+
+
+

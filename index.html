@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title> Next Forms Validation</title>
+		<link rel="stylesheet" href="assets/css/nx-forms.css" type='text/css' media='all'>
+		
+	</head>
+<body>
+	<div class="wfp-campaign-content wfp-content-padding">
+		<form id="wfp_regForm" method="POST">
+		  <div style="text-align:center; margin-top:40px;" class="wfp-tab-step-control " wfp-control="yes">
+			<button class="wfp-step active" >1. Campaign Intro</button>
+			<button class="wfp-step" >2. Add Details</button>
+			<button class="wfp-step" >3. Add Rewards</button>
+			<button class="wfp-step" >4. Submit Now</button>
+		  </div>
+		  <h1>New Form</h1>
+		  <!-- One "tab" for each step in the form: -->
+		  <div class="wfp-tabs-control ">
+			  <div class="wfp-tab active ">Name:
+				<p><input class="wfp-require-filed wfp-input" placeholder="First name..." oninput="wfp_modify_class(this)" required="3" name="fname"></p>
+				<p><input class="wfp-require-filed wfp-input" placeholder="Last name..." oninput="wfp_modify_class(this)" name="lname"></p>
+			  </div>
+			  <div class="wfp-tab">Contact Info:
+				<p><input class="wfp-require-filed wfp-input" placeholder="E-mail..." oninput="wfp_modify_class(this)" required="10" wfp-pattern="email" name="email"></p>
+				<p><input class="wfp-require-filed wfp-input" placeholder="Phone..." oninput="wfp_modify_class(this)" required="5" wfp-pattern="phone" name="phone"></p>
+				<p><input class="wfp-require-filed wfp-input" placeholder="Website..." oninput="wfp_modify_class(this)" required="5" wfp-pattern="website" name="website"></p>
+			  </div>
+			  <div class="wfp-tab">Birthday:
+				<p><input class="wfp-require-filed wfp-input" placeholder="dd" oninput="wfp_modify_class(this)" name="dd" required="1" id="dd" ></p>
+				<p><input class="wfp-require-filed wfp-input" placeholder="mm" oninput="wfp_modify_class(this)" name="nn" required="1" wfp-pattern="not-equal" wfp-target-pattern="#dd"></p>
+				<p><input class="wfp-require-filed wfp-input" placeholder="yyyy" oninput="wfp_modify_class(this)" name="yyyy"></p>
+			  </div>
+			  <div class="wfp-tab">Login Info:
+				<p><input class="wfp-require-filed wfp-input" placeholder="Password..." oninput="wfp_modify_class(this)" required="2" name="uname" id="password" ></p>
+				<p><input class="wfp-require-filed wfp-input" placeholder="Confirm Password..." oninput="wfp_modify_class(this)" required="2" wfp-pattern="equal" wfp-target-pattern="#password" name="pword" type="password"></p>
+			  </div>
+			  <div class="wfp-form-fotter">
+				<div>
+				  <button type="button" class="wfp-form-button wfp-preview">Previous</button>
+				  <button type="button" class="wfp-form-button wfp-next" wfp-finish-button="Submit"><span class=""></span>Next</button>
+				</div>
+			  </div>
+		  </div>
+		  <!-- Circles which indicates the steps of the form: -->
+		 
+		</form>
+	</div>
+	<script type='text/javascript' src='assets/js/nx-forms.js'></script>
+	<script>
+	var wfp_form = wfp_tab_control('#wfp_regForm');
+	</script>
+</body>
+</html>
